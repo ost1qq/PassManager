@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: pink;
+}
+
+main {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.section-wrapper {
+    margin: 25px auto 25px auto;
+    width: 480px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    padding: auto 0 auto 0;
+}
+
+.section-red {
+    background-color: #E85A64;
+    flex: 0 0 37.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 20px 0;
+
+}
+
+.section-black {
+    background-color: #22222E;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.link-btn {
+    background-color: #22222E;
+    border: #E85A64 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 360px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.home-link-btn {
+    margin-top: 20px;
+}
+
+.link-btn:hover {
+    background-color: #E85A64;
+}
+
+.link-btn:active {
+    background-color: #ea3a46;
+    border: #ea3a46 3px solid;
+}
+
+.logoPm {
+    width: 128px;
+    margin-top: 20px;
+}
+
+.logo-text {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+input {
+    background-color: #22222E;
+    border: #E85A64 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 9px 10px 9px 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+input::placeholder {
+    text-align: center;
+    color: #f0f0f0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.add-pass, .show-pass {
+    background-color: #22222E;
+    border: #fff 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    color: #fff;
+}
+
+.add-pass:hover, .show-pass:hover {
+    background-color: #fff;
+    color: #22222E;
+}
+
+.add-pass:active, .show-pass:active{
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.account-passwords {
+    width: 440px;
+    display: flex;
+    align-items: center;
+}
+
+.account-passwords img {
+    margin-right: 10px;
+}
+
+.account-passwords label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.account-passwords input {
+    flex-grow: 1;
+}
