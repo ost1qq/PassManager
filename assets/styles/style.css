@@ -1,25 +1,29 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: pink;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 main {
     margin: 0 auto;
     width: 960px;
+    
 }
 
 .section-wrapper {
     margin: 25px auto 25px auto;
     width: 480px;
-    height: calc(100vh - 100px);
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: auto 0 auto 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
 .section-red {
-    background-color: #E85A64;
+    background-color: #e85a64;
     flex: 0 0 37.5%;
     display: flex;
     flex-direction: column;
@@ -30,7 +34,7 @@ main {
 }
 
 .section-black {
-    background-color: #22222E;
+    background-color: #22222e;
     flex: 1;
     display: flex;
     flex-direction: column;
