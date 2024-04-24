@@ -2,8 +2,11 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    
+}
+
+.body-no-scroll {
+    overflow: hidden;
 }
 
 main {
@@ -11,10 +14,24 @@ main {
     width: 960px;
 }
 
+header {
+    background-color: #E85A64;
+    color: #fff;
+
+}
+
+header>nav>li {
+    list-style: none;
+}
+
+header>nav>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .section-error {
     height: 100vh;
     width: 100%;
-    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,9 +56,10 @@ main {
 }
 
 .section-wrapper {
+    color: #fff;
     margin: 25px auto 25px auto;
     width: 480px;
-    height: auto;
+    height: calc(100vh-100px);
     display: flex;
     flex-direction: column;
     padding: auto 0 auto 0;
@@ -68,21 +86,33 @@ main {
     padding: 20px 0 20px 0;
 }
 
+.section-home,
+.section-about-us,
+.section-contacts,
+.section-manage {
+    border: black solid 2px;
+    height: 100vh;
+}
+
+footer{
+    background-color: #22222E;
+    color: #fff;
+}
+
 .link-btn {
     background-color: #22222E;
+    color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
     height: 50px;
     width: 360px;
     text-decoration: none;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
 }
 
 .home-link-btn {
@@ -106,24 +136,22 @@ main {
 .logo-text {
     font-size: 48px;
     font-weight: 700;
-    color: #fff;
     margin: 0;
 }
 
 input {
     background-color: #22222E;
+    color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
     height: 50px;
     width: 200px;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 9px 10px 9px 10px;
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
     text-align: center;
 }
 
@@ -139,11 +167,11 @@ input:focus {
 .add-pass,
 .show-pass {
     background-color: #22222E;
+    color: #fff;
     border: #fff 3px solid;
     border-radius: 30px;
     height: 50px;
     width: 100px;
-    color: #fff;
 }
 
 .add-pass:hover,
