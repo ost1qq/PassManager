@@ -1,15 +1,42 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
+    background-color: #fff;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
 main {
     margin: 0 auto;
-    width: 960px;  
-} 
+    width: 960px;
+}
+
+.section-error {
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-error>p,
+.section-error>h1 {
+    margin: 0;
+}
+
+.section-error>h1 {
+    font-size: 64px;
+}
+
+.section-error>p {
+    font-size: 24px;
+}
+
+.section-error>a {
+    margin-top: 50px;
+}
 
 .section-wrapper {
     margin: 25px auto 25px auto;
@@ -109,7 +136,8 @@ input:focus {
     outline: none;
 }
 
-.add-pass, .show-pass {
+.add-pass,
+.show-pass {
     background-color: #22222E;
     border: #fff 3px solid;
     border-radius: 30px;
@@ -118,12 +146,14 @@ input:focus {
     color: #fff;
 }
 
-.add-pass:hover, .show-pass:hover {
+.add-pass:hover,
+.show-pass:hover {
     background-color: #fff;
     color: #22222E;
 }
 
-.add-pass:active, .show-pass:active{
+.add-pass:active,
+.show-pass:active {
     background-color: #f0f0f0;
     border-color: #f0f0f0;
 }
