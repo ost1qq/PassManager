@@ -1,23 +1,25 @@
+/* 1. Universal styles */
+/* 1.1. body styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
-    
 }
 
 .body-no-scroll {
     overflow: hidden;
 }
 
+/* 1.2. main styles */
 main {
     margin: 0 auto;
     width: 960px;
 }
 
+/* 1.3. header styles */
 header {
     background-color: #E85A64;
     color: #fff;
-
 }
 
 header>nav>li {
@@ -29,6 +31,24 @@ header>nav>li>a {
     color: #fff;
 }
 
+/* 1.4. Footer styles */
+footer {
+    background-color: #22222E;
+    color: #fff;
+}
+
+/* 2. manager.html */
+/* 2.1. section styles */
+.section-home,
+.section-about-us,
+.section-contacts,
+.section-manage {
+    border: black solid 2px;
+    height: 100vh;
+}
+
+/* 3. 404.html */
+/* 3.1. section styles */
 .section-error {
     height: 100vh;
     width: 100%;
@@ -55,6 +75,41 @@ header>nav>li>a {
     margin-top: 50px;
 }
 
+/* 4. register.html, authorisation.html */
+/* 4.1. login option styles(red section) */
+.login-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.login-option>p>a,
+.login-option>p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.login-option>p {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* 4.2. section black styles */
+.section-black>p>a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p>a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* 5. manager.html, add.html, view.html, edit.html, register.html, authorisation.html */
+/* 5.1. sections styles */
 .section-wrapper {
     color: #fff;
     margin: 25px auto 25px auto;
@@ -74,7 +129,6 @@ header>nav>li>a {
     align-items: center;
     justify-content: flex-start;
     padding: 20px 0 20px 0;
-
 }
 
 .section-black {
@@ -86,20 +140,9 @@ header>nav>li>a {
     padding: 20px 0 20px 0;
 }
 
-.section-home,
-.section-about-us,
-.section-contacts,
-.section-manage {
-    border: black solid 2px;
-    height: 100vh;
-}
-
-footer{
-    background-color: #22222E;
-    color: #fff;
-}
-
-.link-btn {
+/* 5.2. buttons styles */
+.link-btn,
+.action-btn {
     background-color: #22222E;
     color: #fff;
     border: #E85A64 3px solid;
@@ -111,23 +154,66 @@ footer{
     justify-content: center;
     align-items: center;
     margin: 10px;
-    font-size: 24px;
     font-weight: 700;
+    font-size: 24px;
 }
 
-.home-link-btn {
+.home-link-btn,
+.sign-up-btn,
+.log-in-btn {
     margin-top: 20px;
 }
 
-.link-btn:hover {
+.link-btn:hover,
+.action-btn:hover {
     background-color: #E85A64;
 }
 
-.link-btn:active {
+.link-btn:active,
+.action-btn:active {
     background-color: #ea3a46;
     border: #ea3a46 3px solid;
 }
 
+.action-btn>button {
+    width: 100%;
+    height: 110%;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.add-pass,
+.show-pass,
+.edit-pass {
+    background-color: #22222E;
+    color: #fff;
+    border: #fff 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.add-pass:hover,
+.show-pass:hover,
+.edit-pass:hover {
+    background-color: #fff;
+    color: #22222E;
+}
+
+.add-pass:active,
+.show-pass:active,
+.edit-pass:active {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+/* 5.3. logo styles */
 .logoPm {
     width: 128px;
     margin-top: 20px;
@@ -139,13 +225,13 @@ footer{
     margin: 0;
 }
 
+/* 5.4. input styles */
 input {
     background-color: #22222E;
     color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
     height: 50px;
-    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,37 +241,25 @@ input {
     text-align: center;
 }
 
+.wide-input {
+    width: 360px;
+}
+
+.slim-input {
+    width: 200px;
+}
+
 input::placeholder {
     text-align: center;
-    color: #f0f0f0;
+    color: rgba(240, 240, 240, 0.5);
+    font-weight: 400;
 }
 
 input:focus {
     outline: none;
 }
 
-.add-pass,
-.show-pass {
-    background-color: #22222E;
-    color: #fff;
-    border: #fff 3px solid;
-    border-radius: 30px;
-    height: 50px;
-    width: 100px;
-}
-
-.add-pass:hover,
-.show-pass:hover {
-    background-color: #fff;
-    color: #22222E;
-}
-
-.add-pass:active,
-.show-pass:active {
-    background-color: #f0f0f0;
-    border-color: #f0f0f0;
-}
-
+/* 5.5. article styles */
 .account-passwords {
     width: 440px;
     display: flex;
