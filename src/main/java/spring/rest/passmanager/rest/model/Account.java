@@ -1,17 +1,21 @@
 package spring.rest.passmanager.rest.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
+@Table(name = "Accounts")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private Integer id;
 
+    @Column(name = "Username")
     private String username;
+
+    @Column(name = "Password")
     private String password;
 
     public Account() {
