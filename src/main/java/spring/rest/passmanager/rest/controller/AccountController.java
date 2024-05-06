@@ -1,8 +1,8 @@
-package spring.rest.passmanager.rest.controller.accountmanipulation;
+package spring.rest.passmanager.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import spring.rest.passmanager.business.AccountService;
+import spring.rest.passmanager.service.AccountService;
 import spring.rest.passmanager.rest.model.Account;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,16 +10,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RequestMapping("/account")
 @RestController
 public class AccountController {
-    private AtomicInteger idCounter = new AtomicInteger();
-
     @Autowired
     private AccountService accountService;
 
     @PostMapping(path = "/registration")
     public Account registration(@RequestBody Account account) {
-        account.setId(idCounter.incrementAndGet());
-        System.out.println(accountService.createAccount(account));
-        return account;
+        return accountService.createAccount(account);
     }
 
     @PostMapping(path = "/authorisation")

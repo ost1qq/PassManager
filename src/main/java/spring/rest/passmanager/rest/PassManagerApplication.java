@@ -7,11 +7,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan ({
-	"spring.rest.passmanager.dataaccess",
-	"spring.rest.passmanager.business",
+		"spring.rest.passmanager.repository",
+		"spring.rest.passmanager.service",
 	"spring.rest.passmanager.rest.controller"
 })
-@EnableJpaRepositories({"spring.rest.passmanager.dataaccess"})
+@EnableJpaRepositories({"spring.rest.passmanager.repository"})
 public class PassManagerApplication {
 
 	public static void main(String[] args) {

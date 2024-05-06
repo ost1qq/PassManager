@@ -1,11 +1,15 @@
 package spring.rest.passmanager.rest.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "Accounts")
+@NoArgsConstructor
+@AllArgsConstructor
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,15 +21,6 @@ public class Account {
 
     @Column(name = "Password")
     private String password;
-
-    public Account() {
-
-    }
-
-    Account(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
 
     public String getUsername() {
         return username;
