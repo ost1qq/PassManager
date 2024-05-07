@@ -1,11 +1,14 @@
 package spring.rest.passmanager.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import spring.rest.passmanager.service.AccountService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import spring.rest.passmanager.rest.model.Account;
+import spring.rest.passmanager.service.AccountService;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Optional;
 
 @RequestMapping("/account")
 @RestController
@@ -19,12 +22,7 @@ public class AccountController {
     }
 
     @PostMapping(path = "/authorisation")
-    public Account authorisation(@RequestBody Account account) {
-        System.out.println("Authorisation request received");
-        // if in db
-        // then
-            return account;
-        // else
-            // return null;
+    public Optional<Account> authorisation(@RequestBody Account account) {
+        return accountService.loginInAccount(account);
     }
 }

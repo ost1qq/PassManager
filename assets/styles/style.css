@@ -22,11 +22,11 @@ header {
     color: #fff;
 }
 
-header>nav>li {
+header > nav > li {
     list-style: none;
 }
 
-header>nav>li>a {
+header > nav > li > a {
     text-decoration: none;
     color: #fff;
 }
@@ -58,20 +58,20 @@ footer {
     justify-content: center;
 }
 
-.section-error>p,
-.section-error>h1 {
+.section-error > p,
+.section-error > h1 {
     margin: 0;
 }
 
-.section-error>h1 {
+.section-error > h1 {
     font-size: 64px;
 }
 
-.section-error>p {
+.section-error > p {
     font-size: 24px;
 }
 
-.section-error>a {
+.section-error > a {
     margin-top: 50px;
 }
 
@@ -84,26 +84,26 @@ footer {
     color: #fff;
 }
 
-.login-option>p>a,
-.login-option>p {
+.login-option > p > a,
+.login-option > p {
     color: #fff;
     text-decoration: none;
     font-size: 36px;
 }
 
-.login-option>p {
+.login-option > p {
     margin-right: 5px;
     margin-left: 5px;
 }
 
 /* 4.2. section black styles */
-.section-black>p>a {
+.section-black > p > a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-p>a:hover {
+p > a:hover {
     color: #f0f0f0;
     text-decoration: underline;
 }
@@ -175,7 +175,7 @@ p>a:hover {
     border: #ea3a46 3px solid;
 }
 
-.action-btn>button {
+.action-btn > button {
     width: 100%;
     height: 110%;
     background: transparent;

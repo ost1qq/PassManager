@@ -3,7 +3,6 @@ package spring.rest.passmanager.rest.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import spring.rest.passmanager.rest.model.FacebookPassword;
-import spring.rest.passmanager.service.AccountService;
 import spring.rest.passmanager.service.FacebookPasswordService;
 
 @RequestMapping("/passwords/facebook")
@@ -12,14 +11,18 @@ public class FacebookController {
     @Autowired
     private FacebookPasswordService facebookPasswordService;
 
-    @GetMapping
-    public String getFacebookPassword() {
-        System.out.println("Send facebook password request");
-        return null; // return password from db
+    @GetMapping("/get/{id}")
+    public FacebookPassword getFacebookPassword(@PathVariable("id") Integer userID) {
+        return facebookPasswordService.getFacebookPassword(userID);
     }
 
-    @PostMapping
-    public FacebookPassword postFacebookPassword(@RequestParam FacebookPassword password) {
+    @PostMapping("/post")
+    public FacebookPassword postFacebookPassword(@RequestBody FacebookPassword password) {
         return facebookPasswordService.saveFacebookPassword(password);
+    }
+
+    @PutMapping("/update")
+    public FacebookPassword updateFacebookPassword(@RequestBody FacebookPassword password) {
+        return facebookPasswordService.updateFacebookPassword(password);
     }
 }
