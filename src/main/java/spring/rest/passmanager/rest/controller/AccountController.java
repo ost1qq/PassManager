@@ -22,7 +22,7 @@ public class AccountController {
     }
 
     @PostMapping(path = "/authorisation")
-    public Optional<Account> authorisation(@RequestBody Account account) {
-        return accountService.loginInAccount(account);
+    public Integer authorisation(@RequestBody Account account) {
+        return accountService.loginInAccount(account).get().getId();
     }
 }
