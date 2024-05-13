@@ -1,22 +1,26 @@
 package spring.rest.passmanager.rest.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name = "GooglePasswords")
+@Table(name = "InstagramPasswords")
 @NoArgsConstructor
 @AllArgsConstructor
-public class GooglePassword {
+public class InstagramData {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "instagramDataID")
+    private int instagramDataID;
+
     @Column(name = "UserID")
     private int userID;
+
+    @Column(name = "Login")
+    private String login;
 
     @Column(name = "Password")
     private String password;

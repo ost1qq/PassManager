@@ -12,6 +12,10 @@
 <main class="main-account">
     <section class="section-wrapper">
         <section class="section-red">
+            <div class="logo-pm">
+                <p class="logo-text">PassManager</p>
+                <img alt="Логотип PassManager" class="logo-img" src="../../../../assets/images/logoPm.png"/>
+            </div>
             <div class="login-option">
                 <p><a href="registration.html">Registration</a></p>
                 <p>|</p>
@@ -19,20 +23,19 @@
             </div>
         </section>
         <section class="section-black">
-            <form action="">
-                <input class="wide-input" id="" name="" placeholder="Username" type="text">
-                <input class="wide-input" placeholder="Password" type="password">
-                <div class="action-btn log-in-btn">
-                    <button>Log in
-                </div>
-                </span>
+            <h1 class="page-name">Log in your account</h1>
+            <form class="form-wrapper" id="authFormId">
+                <input class="wide-input" id="usernameIdAuth" placeholder="Username" type="text">
+                <input class="wide-input" id="passwordIdAuth" placeholder="Password" type="password">
+                <button class="action-btn log-in-btn" id="logInBtnId">Log in</button>
+                <p><a href="404.html">Have a problem with logging in?</a></p>
             </form>
-            <p><a href="error.html">Have a problem with logging in?</a></p>
         </section>
     </section>
 </main>
 <footer>
 </footer>
+<script src="../../../../scripts/authScript.js"></script>
 </body>
 
 </html>

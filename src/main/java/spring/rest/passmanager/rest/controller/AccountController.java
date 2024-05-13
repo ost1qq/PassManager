@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import spring.rest.passmanager.rest.model.Account;
 import spring.rest.passmanager.service.AccountService;
 
+import java.util.Optional;
+
 @RequestMapping("/account")
 @RestController
 public class AccountController {
@@ -20,7 +22,7 @@ public class AccountController {
     }
 
     @PostMapping(path = "/authorisation")
-    public Integer authorisation(@RequestBody Account account) {
-        return accountService.loginInAccount(account).get().getId();
+    public Optional<Account> authorisation(@RequestBody Account account) {
+        return accountService.loginInAccount(account);
     }
 }

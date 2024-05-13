@@ -1,5 +1,13 @@
 /* 1. Universal styles */
 /* 1.1. body styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,12 +16,18 @@ body {
 
 .body-no-scroll {
     overflow: hidden;
+    margin: 0;
 }
 
 /* 1.2. main styles */
 main {
     margin: 0 auto;
-    width: 960px;
+}
+
+.main-account {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
 /* 1.3. header styles */
@@ -56,6 +70,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 .section-error > p,
@@ -80,7 +95,7 @@ footer {
 .login-option {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     color: #fff;
 }
 
@@ -97,13 +112,37 @@ footer {
 }
 
 /* 4.2. section black styles */
-.section-black > p > a {
+.form-wrapper {
+    text-align: center;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-black > .form-wrapper > p > a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-p > a:hover {
+.error-message {
+    color: #D3021B;
+    display: none;
+    background-color: #FFB2C7;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 0 20px 0;
+}
+
+.login-option > p:hover,
+.section-black > .form-wrapper > p > a:hover {
     color: #f0f0f0;
     text-decoration: underline;
 }
@@ -112,43 +151,55 @@ p > a:hover {
 /* 5.1. sections styles */
 .section-wrapper {
     color: #fff;
-    margin: 25px auto 25px auto;
-    width: 480px;
-    height: calc(100vh-100px);
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: auto 0 auto 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
-.section-red {
-    background-color: #e85a64;
-    flex: 0 0 37.5%;
+.input-wrapper {
+    width: 960px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 20px 0 20px 0;
+    justify-content: center;
+    margin: 0;
+}
+
+.section-red {
+    background-color: #e85a64;
+    width: 100%;
+    height: 30%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .section-black {
-    background-color: #22222e;
-    flex: 1;
+    background: no-repeat url(../images/background.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 20px 0;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+    margin: 0;
 }
 
 /* 5.2. buttons styles */
 .link-btn,
 .action-btn {
-    background-color: #22222E;
+    background-color: transparent;
     color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
     height: 50px;
-    width: 360px;
+    width: 500px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -189,7 +240,7 @@ p > a:hover {
 .add-pass,
 .show-pass,
 .edit-pass {
-    background-color: #22222E;
+    background-color: transparent;
     color: #fff;
     border: #fff 3px solid;
     border-radius: 30px;
@@ -214,20 +265,39 @@ p > a:hover {
 }
 
 /* 5.3. logo styles */
-.logoPm {
-    width: 128px;
-    margin-top: 20px;
+.logo-pm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.logo-img {
+    width: 64px;
+    height: 64px;
+    margin: 0 0 0 10px;
 }
 
 .logo-text {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
     margin: 0;
 }
 
+.page-name {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
 /* 5.4. input styles */
 input {
-    background-color: #22222E;
+    background-color: transparent;
     color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
@@ -239,14 +309,15 @@ input {
     font-size: 24px;
     font-weight: 700;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .wide-input {
-    width: 360px;
+    width: 500px;
 }
 
 .slim-input {
-    width: 200px;
+    width: 500px;
 }
 
 input::placeholder {
@@ -261,9 +332,11 @@ input:focus {
 
 /* 5.5. article styles */
 .account-passwords {
-    width: 440px;
+    width: 800px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .account-passwords img {
@@ -276,6 +349,14 @@ input:focus {
     width: 100%;
 }
 
-.account-passwords input {
-    flex-grow: 1;
+.scrollbox {
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
 }

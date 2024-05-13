@@ -21,6 +21,10 @@ public class AccountService {
     }
 
     public Optional<Account> loginInAccount(Account account) {
-        return accountRepository.findByUsernameAndPassword(account.getUsername(), account.getPassword());
+        if (accountRepository.existsByUsername(account.getUsername())) {
+            return accountRepository.findByUsernameAndPassword(account.getUsername(), account.getPassword());
+        } else {
+            return Optional.empty();
+        }
     }
 }

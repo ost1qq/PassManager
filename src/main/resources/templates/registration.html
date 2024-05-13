@@ -8,32 +8,37 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="body-no-scroll">
 <main class="main-account">
     <section class="section-wrapper">
         <section class="section-red">
+            <div class="logo-pm">
+                <p class="logo-text">PassManager</p>
+                <img alt="Логотип PassManager" class="logo-img" src="../../../../assets/images/logoPm.png"/>
+            </div>
             <div class="login-option">
                 <p style="font-weight: 700;"><a href="registration.html">Registration</a></p>
                 <p>|</p>
                 <p><a href="authorisation.html">Authorisation</a></p>
             </div>
+
         </section>
         <section class="section-black">
-            <form action="">
-                <input class="wide-input" id="" name="" placeholder="Username" type="text">
-                <input class="wide-input" placeholder="Password" type="password">
-                <input class="wide-input" placeholder="Repeat password" type="password">
-                <div class="action-btn sign-up-btn">
-                    <button>Sign up
-                </div>
-                </span>
+            <h1 class="page-name">Create your account</h1>
+            <form class="form-wrapper" id="regFromId">
+                <input class="wide-input" id="usernameIdReg" name="" placeholder="Username" type="text">
+                <input class="wide-input" id="passwordIdReg" placeholder="Password" type="password">
+                <input class="wide-input" id="rePasswordIdReg" placeholder="Repeat password" type="password">
+                <button class="action-btn sign-up-btn" id="signUpBtnId" type="submit">Sign up</button>
+                <div class="error-message"></div>
+                <p><a href="404.html">Have a problem with signing up?</a></p>
             </form>
-            <p><a href="error.html">Have a problem with signing up?</a></p>
         </section>
     </section>
 </main>
 <footer>
 </footer>
+<script src="../../../../scripts/regScript.js"></script>
 </body>
 
 </html>
