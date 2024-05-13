@@ -2,7 +2,6 @@ package spring.rest.passmanager.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import spring.rest.passmanager.rest.model.FacebookPassword;
 import spring.rest.passmanager.rest.model.InstagramPassword;
 import spring.rest.passmanager.service.InstagramPasswordService;
 

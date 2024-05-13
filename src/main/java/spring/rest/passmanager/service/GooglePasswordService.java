@@ -2,9 +2,7 @@ package spring.rest.passmanager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import spring.rest.passmanager.repository.AccountRepository;
 import spring.rest.passmanager.repository.GooglePasswordRepository;
-import spring.rest.passmanager.rest.model.FacebookPassword;
 import spring.rest.passmanager.rest.model.GooglePassword;
 
 @Service

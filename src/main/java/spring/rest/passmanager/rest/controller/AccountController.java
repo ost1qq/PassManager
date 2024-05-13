@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import spring.rest.passmanager.rest.model.Account;
 import spring.rest.passmanager.service.AccountService;
 
-import java.util.Optional;
-
 @RequestMapping("/account")
 @RestController
 public class AccountController {

@@ -13,7 +13,11 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     public Account createAccount(Account account) {
-        return accountRepository.save(account);
+        if (accountRepository.existsByUsername(account.getUsername())) {
+            return null;
+        } else {
+            return accountRepository.save(account);
+        }
     }
 
     public Optional<Account> loginInAccount(Account account) {
