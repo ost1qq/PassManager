@@ -17,30 +17,30 @@
     <main>
         <div class="section-wrapper">
             <section class="section-red">
-                <p class="logo-text">PassManager</p>
-                <img class="logoPm" src="assets/images/logoPm.png" alt="Логотип PassManager" />
+                <div class="logo-pm">
+                    <p class="logo-text">PassManager</p>
+                    <img class="logo-img" src="assets/images/logoPm.png" alt="Логотип PassManager" />
+                </div>
             </section>
             <section class="section-black">
+                <h1 class="page-name">View your passwords</h1>
                 <article class="account-passwords">
                     <img src="assets/icons/icon-fb.png" alt="Facebook" width="50px">
-                    <label for="fb-id">
-                        <input id="fb-id" class="slim-input" type="text" placeholder="****************" readonly>
-                        <button onclick="showPassword()" class="show-pass">View</button>
-                    </label>
+                    <input id="fb-login-id" class="slim-input" type="text" placeholder="****************">
+                    <input id="fb-password-id" class="slim-input" type="text" placeholder="****************">
+                    <button id="fb-view-id" class="show-pass">View</button>
                 </article>
                 <article class="account-passwords">
                     <img src="assets/icons/icon-inst.png" alt="Instagram" width="50px">
-                    <label for="inst-id">
-                        <input id="inst-id" class="slim-input" type="text" placeholder="****************" readonly>
-                        <button onclick="showPassword()" class="show-pass">View</button>
-                    </label>
+                    <input id="inst-login-id" class="slim-input" type="text" placeholder="****************">
+                    <input id="inst-password-id" class="slim-input" type="text" placeholder="****************">
+                    <button id="inst-view-id" class="show-pass">View</button>
                 </article>
                 <article class="account-passwords">
                     <img src="assets/icons/icon-google.png" alt="Google" width="50px">
-                    <label for="google-id">
-                        <input id="google-id" class="slim-input" type="text" placeholder="****************" readonly>
-                        <button onclick="showPassword()" class="show-pass">View</button>
-                    </label>
+                    <input id="google-login-id" class="slim-input" type="text" placeholder="****************">
+                    <input id="google-password-id" class="slim-input" type="text" placeholder="****************">
+                    <button id="fb-view" class="show-pass">View</button>
                 </article>
                 <a href="manager.html" class="link-btn home-link-btn">Go back</a>
             </section>
