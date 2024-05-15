@@ -1,0 +1,541 @@
+/* 1. Universal styles */
+/* 1.1. body styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+/* 1.2. main styles */
+main {
+    margin: 0 auto;
+    width: 960px;
+}
+
+/* 1.3. header styles */
+header {
+    background-color: #E85A64;
+    color: #fff;
+}
+
+header>nav>li {
+    list-style: none;
+}
+
+header>nav>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 1.4. Footer styles */
+footer {
+    background-color: #22222E;
+    color: #fff;
+}
+
+/* 2. manager.html */
+/* 2.1. section styles */
+.section-home,
+.section-about-us,
+.section-contacts,
+.section-manage {
+    border: black solid 2px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 3. 404.html */
+/* 3.1. section styles */
+.section-error {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-error>p,
+.section-error>h1 {
+    margin: 0;
+}
+
+.section-error>h1 {
+    font-size: 64px;
+}
+
+.section-error>p {
+    font-size: 24px;
+}
+
+.section-error>a {
+    margin-top: 50px;
+}
+
+/* 4. register.html, authorisation.html */
+/* 4.1. login option styles(red section) */
+.login-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.login-option>p>a,
+.login-option>p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.login-option>p {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/* 4.2. section black styles */
+.section-black>p>a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p>a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* 5. manager.html, add.html, view.html, edit.html, register.html, authorisation.html */
+/* 5.1. sections styles */
+.section-wrapper {
+    color: #fff;
+    margin: 25px auto 25px auto;
+    width: 480px;
+    height: calc(100vh-100px);
+    display: flex;
+    flex-direction: column;
+    padding: auto 0 auto 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.section-red {
+    background-color: #e85a64;
+    flex: 0 0 37.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 20px 0;
+}
+
+.section-black {
+    background-color: #22222e;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+/* 5.2. buttons styles */
+.link-btn,
+.action-btn {
+    background-color: #22222E;
+    color: #fff;
+    border: #E85A64 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 360px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.home-link-btn,
+.sign-up-btn,
+.log-in-btn {
+    margin-top: 20px;
+}
+
+.link-btn:hover,
+.action-btn:hover {
+    background-color: #E85A64;
+}
+
+.link-btn:active,
+.action-btn:active {
+    background-color: #ea3a46;
+    border: #ea3a46 3px solid;
+}
+
+.action-btn>button {
+    width: 100%;
+    height: 110%;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.add-pass,
+.show-pass,
+.edit-pass {
+    background-color: #22222E;
+    color: #fff;
+    border: #fff 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.add-pass:hover,
+.show-pass:hover,
+.edit-pass:hover {
+    background-color: #fff;
+    color: #22222E;
+}
+
+.add-pass:active,
+.show-pass:active,
+.edit-pass:active {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+/* 5.3. logo styles */
+.logoPm {
+    width: 128px;
+    margin-top: 20px;
+}
+
+.logo-text {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* 5.4. input styles */
+input {
+    background-color: #22222E;
+    color: #fff;
+    border: #E85A64 3px solid;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 9px 10px 9px 10px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.wide-input {
+    width: 360px;
+}
+
+.slim-input {
+    width: 200px;
+}
+
+input::placeholder {
+    text-align: center;
+    color: rgba(240, 240, 240, 0.5);
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* 5.5. article styles */
+.account-passwords {
+    width: 440px;
+    display: flex;
+    align-items: center;
+}
+
+.account-passwords img {
+    margin-right: 10px;
+}
+
+.account-passwords label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.account-passwords input {
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+header h1 {
+    margin: 0 10px;
+}
+.nadp{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+header a{ margin-left: 12px;
+color: white;}
+
+.logoPmIndex {
+    width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+}
+.cont-h1{
+    text-align: center;
+}
+.card{
+    margin: 36px 12px 0 12px;
+    min-width: 325px;
+    max-width: 460px;
+    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.sup1{
+    max-width: 100%;
+    height: auto;
+}
+.card-info{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-text{
+    text-align: center;
+    height: 220px;
+}
+.card-heading{
+    padding: 0 28px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+}
+.card-subtitle{
+    padding: 24px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.card-ctas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 40px;
+}
+.support-button-chat{
+    background-color: #DF1C2F;
+    color: white;
+    display: block;
+    border-radius: 4px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 2.72;
+}
+.support-button-market{
+    padding: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+a {
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.leader{
+    display: flex;
+    justify-content: center;
+    
+   
+}
+.leader-img{
+    width: auto;
+}
+.text-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.cont-led{
+    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.08);
+    max-width: 199px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.team{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.section-home img{
+height: auto;
+
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    padding-top: 3%;
+    width: 950px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+}
+.img-main{
+    width: 380px;
+}
+.about-text h1{
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+.about-text p{
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+/* .but-home{
+background: #DF1C2F;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 13px 30px;
+border-radius: 30px;
+transition: .4s;
+}
+.but-home:hover{
+    background: transparent;
+    border: 2px solid #47060c;
+    cursor: pointer;
+    background-color: #0c0506;
+} */
+.contacts{
+    background-color: black;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.cont{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    
+}
+.num-cont{
+    height: 30px;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    align-items: center;
+    padding: 5px 20px;
+    border-style: solid;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+.num-cont_2{
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    align-items: center;
+    padding: 5px 20px;
+    border-style: solid;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+.white-phone{
+    width: 25px;
+    margin-right: 5px;
+}
+.pad{
+    padding-left: 22px;
+}
+.text{
+    text-align: center;
+}
+.card-manage{
+    margin: 36px 12px 0 12px;
+    max-width: 337px;
+    box-shadow: 2px 0px 20px 2px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.white-chat{
+    width: 30px;
+}
+.container{
+    width: 960px;
+}
