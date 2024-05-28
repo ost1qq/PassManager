@@ -1,13 +1,5 @@
 /* 1. Universal styles */
 /* 1.1. body styles */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-}
-
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,18 +8,12 @@ body {
 
 .body-no-scroll {
     overflow: hidden;
-    margin: 0;
 }
 
 /* 1.2. main styles */
 main {
     margin: 0 auto;
-}
-
-.main-account {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
+    width: 960px;
 }
 
 /* 1.3. header styles */
@@ -36,11 +22,11 @@ header {
     color: #fff;
 }
 
-header > nav > li {
+header>nav>li {
     list-style: none;
 }
 
-header > nav > li > a {
+header>nav>li>a {
     text-decoration: none;
     color: #fff;
 }
@@ -61,7 +47,7 @@ footer {
     height: 100vh;
 }
 
-/* 3. error.html */
+/* 3. 404.html */
 /* 3.1. section styles */
 .section-error {
     height: 100vh;
@@ -73,20 +59,20 @@ footer {
     color: #fff;
 }
 
-.section-error > p,
-.section-error > h1 {
+.section-error>p,
+.section-error>h1 {
     margin: 0;
 }
 
-.section-error > h1 {
+.section-error>h1 {
     font-size: 64px;
 }
 
-.section-error > p {
+.section-error>p {
     font-size: 24px;
 }
 
-.section-error > a {
+.section-error>a {
     margin-top: 50px;
 }
 
@@ -95,54 +81,30 @@ footer {
 .login-option {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     color: #fff;
 }
 
-.login-option > p > a,
-.login-option > p {
+.login-option>p>a,
+.login-option>p {
     color: #fff;
     text-decoration: none;
     font-size: 36px;
 }
 
-.login-option > p {
+.login-option>p {
     margin-right: 5px;
     margin-left: 5px;
 }
 
 /* 4.2. section black styles */
-.form-wrapper {
-    text-align: center;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.section-black > .form-wrapper > p > a {
+.section-black>p>a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-.error-message {
-    color: #D3021B;
-    display: none;
-    background-color: #FFB2C7;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 20px 0 20px 0;
-}
-
-.login-option > p:hover,
-.section-black > .form-wrapper > p > a:hover {
+p>a:hover {
     color: #f0f0f0;
     text-decoration: underline;
 }
@@ -151,55 +113,43 @@ footer {
 /* 5.1. sections styles */
 .section-wrapper {
     color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
+    margin: 25px auto 25px auto;
+    width: 480px;
+    height: calc(100vh-100px);
     display: flex;
     flex-direction: column;
     padding: auto 0 auto 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
-.input-wrapper {
-    width: 960px;
+.section-red {
+    background-color: #e85a64;
+    flex: 0 0 37.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-}
-
-.section-red {
-    background-color: #e85a64;
-    width: 100%;
-    height: 30%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0 20px 0;
 }
 
 .section-black {
-    background: no-repeat url(../images/background.jpg);
+    background-color: #22222e;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70%;
-    margin: 0;
+    padding: 20px 0 20px 0;
 }
 
 /* 5.2. buttons styles */
 .link-btn,
 .action-btn {
-    background-color: transparent;
+    background-color: #22222E;
     color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
     height: 50px;
-    width: 500px;
+    width: 360px;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -226,7 +176,7 @@ footer {
     border: #ea3a46 3px solid;
 }
 
-.action-btn > button {
+.action-btn>button {
     width: 100%;
     height: 110%;
     background: transparent;
@@ -240,7 +190,7 @@ footer {
 .add-pass,
 .show-pass,
 .edit-pass {
-    background-color: transparent;
+    background-color: #22222E;
     color: #fff;
     border: #fff 3px solid;
     border-radius: 30px;
@@ -265,39 +215,20 @@ footer {
 }
 
 /* 5.3. logo styles */
-.logo-pm {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    height: auto;
-}
-
-.logo-img {
-    width: 64px;
-    height: 64px;
-    margin: 0 0 0 10px;
+.logoPm {
+    width: 128px;
+    margin-top: 20px;
 }
 
 .logo-text {
-    font-size: 64px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.page-name {
     font-size: 48px;
     font-weight: 700;
-    margin: 0 0 20px 0;
+    margin: 0;
 }
 
 /* 5.4. input styles */
 input {
-    background-color: transparent;
+    background-color: #22222E;
     color: #fff;
     border: #E85A64 3px solid;
     border-radius: 30px;
@@ -309,15 +240,14 @@ input {
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .wide-input {
-    width: 500px;
+    width: 360px;
 }
 
 .slim-input {
-    width: 500px;
+    width: 200px;
 }
 
 input::placeholder {
@@ -332,11 +262,9 @@ input:focus {
 
 /* 5.5. article styles */
 .account-passwords {
-    width: 800px;
+    width: 440px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .account-passwords img {
@@ -349,14 +277,6 @@ input:focus {
     width: 100%;
 }
 
-.scrollbox {
-    overflow-y: auto;
-}
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #fff;
+.account-passwords input {
+    flex-grow: 1;
 }
